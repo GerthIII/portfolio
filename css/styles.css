@@ -1,10 +1,11 @@
 :root {
-  --bg: #0f172a;
-  --card-bg: #1e293b;
-  --text-main: #f8fafc;
-  --text-dim: #94a3b8;
-  --accent: #38bdf8;
-  --transition: all 0.3s ease;
+  --bg: #f8f9f8;          /* Light stone grey/off-white */
+  --card-bg: #ffffff;     /* Pure white */
+  --text-main: #1a1c1a;   /* Deep charcoal */
+  --text-dim: #5c635c;    /* Muted sage-grey */
+  --accent: #2d5a4c;      /* Deep forest green */
+  --accent-light: #e8f0ed; /* Soft mint for tags */
+  --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 body {
@@ -69,22 +70,22 @@ h1 {
   background: var(--card-bg);
   border-radius: 12px;
   padding: 2rem;
-  border: 1px solid #334155;
+  border: 1px solid #e1e4e1; /* Lighter, cleaner border */
   transition: var(--transition);
   display: flex;
   flex-direction: column;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
   border-color: var(--accent);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 40px -15px rgba(45, 90, 76, 0.15); /* Tinted shadow */
 }
 
 .card h3 {
   margin-top: 0;
   font-size: 1.5rem;
-  color: var(--accent);
+  color: var(--accent); /* Forest green titles */
 }
 
 .card p {
@@ -98,12 +99,13 @@ h1 {
 
 .tag {
   font-size: 0.75rem;
-  background: #0f172a;
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
+  background: var(--accent-light); /* Soft mint background */
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
   margin-right: 0.5rem;
-  color: var(--text-main);
-  border: 1px solid #334155;
+  color: var(--accent); /* Dark green text for readability */
+  border: none;
+  font-weight: 600;
 }
 
 .project-link {
