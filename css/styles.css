@@ -138,6 +138,17 @@ footer {
   z-index: 1;
 }
 
+.video-wrapper {
+  position: relative;
+  z-index: 2; /* Higher than the main-link::after */
+  margin-top: 15px;
+}
+
+.video-wrapper iframe {
+  max-width: 100%; /* Ensures it doesn't break on mobile */
+  border-radius: 8px;
+}
+
 .github-link {
   position: relative;
   z-index: 2;
